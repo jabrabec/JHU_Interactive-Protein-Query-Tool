@@ -5,10 +5,7 @@ The Interactive protein query tool provides an interface for the customized/cura
 	2. Perform BLAST+ protein analysis on a desired sequence against only those proteins in the customized/curated database.
 	3. Upload whole genomes in Genbank format into the database.
 
-Source code has beeb made available via Blackboard under the AS410.712 final submission tool, in .tar.gz format.
-
-Demo version is available here:
-http://cloud-131-215.diagcomputing.org/jbrabec1/FinalProject/
+Demo version is currently unavailable. 
 
 
 **REQUIREMENTS**
@@ -25,6 +22,15 @@ Standard Perl toolkit modules such as CGI, HTML::Template, Config::IniFiles, mus
 
 The NCBI BLAST+ installation will require approximately 400mb installed, without attached databases. Recommended available memory is 1gb.
 
+Not included in this package, but required:
+	1. settings.ini file, containing:
+		[database]
+		server = localhost
+		name = <db_name> 
+		user = <user_name> 
+		pass = <user_password>
+	2. A preformatted MySQL database in Chado format, e.g. http://gmod.org/wiki/Chado_-_Getting_Started 
+	
 
 **USAGE INSTRUCTIONS**
 
@@ -60,4 +66,4 @@ In order to examine how this tool works, the following example steps can be foll
 
 **QUESTIONS**
 
-Questions about this tool can be directed to Jennifer Brabec (jbrabec1@jhu.edu). 07May2013.
+Questions about this tool can be directed to Jennifer Brabec (jenniferbrabec@gmail.com). 07May2013.
