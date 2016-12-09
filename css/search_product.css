@@ -1,0 +1,39 @@
+body {
+    font: small 'Lucida Grande', Verdana, Arial, sans-serif;
+}
+
+body#blastp {
+    font: small Courier;
+}
+
+h2 {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* the results section should be initially invisible */
+section#results {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+table thead td {
+    font-weight: bold;
+}
+
+table td {
+    border: 1px solid rgb(200,200,200);
+    padding: 2px 10px;
+    white-space:nowrap;    
+}
+/*
+
+ul.ui-autocomplete
+{
+    list-style-type:none;
+}
+*/

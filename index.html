@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>AS410.712 SP13: Final Project</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/search_product.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+</head>
+
+<body id="main">
+
+	<h1>Interactive protein query tool</h1>
+
+    <form name="gene_search" id="gene_search" action="">
+        <label for="search_term">Search the database for target gene products by entering search terms here:</label>
+        <input name="search_term" id="search_term" type="search" value="" placeholder="e.g. glutamate synthase" autofocus="autofocus" autocomplete="off"/>
+        <input name="submit" type="submit" id="submit" value="Submit gene product query">
+    </form>
+
+    <form name="blast_search" id="blast_search" method="post" action="./blast_user_query.cgi">
+        <label for="blast_query">Enter a protein sequence (amino acids only) to run a BLAST+ analysis against this custom database:</label>
+        <input id="blast_query" name="blast_query" type="text" placeholder="e.g. MRNPTLLQCFHWYYPEGGKLWPELAERADG"/>
+        <input name="submit" type="submit" id="submit" value="Submit BLASTP query">
+    </form>
+
+    <form id="uploadfile"  method="POST" action="./upload.cgi" enctype="multipart/form-data">
+<!--                 <fieldset> -->
+<!--                 <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" /> -->
+        <label for="fileselect">Upload Genbank files (.gb or.gbk format, including sequences, only) to the database:</label>
+        <input type="file" id="fileselect" name="fileselect" multiple="multiple" />
+        <button type="submit" id="fileselect">Upload Files</button>
+<!--                 </fieldset> -->
+    </form>
+
+    <section id='results'>
+        <p>
+            <span id='match_count'>0</span> match(es) found.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>Organism</td>
+                <td>Locus tag</td>
+                <td>Product</td>
+                <td id='residues'>Amino Acid Residues</td>                
+            </tr>
+            </thead>
+            <tbody>
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+<!--     <section id='uploadresults'>
+        <p>Thanks for uploading your file!</p>
+        <p>Your file:</p>
+        <p>         -->
+            <!-- this will be filled in by javascript when there are results -->
+<!--         </p>
+    </section> -->
+
+
+</body>
+
+</html>

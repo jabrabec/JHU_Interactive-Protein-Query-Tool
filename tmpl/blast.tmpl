@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title><TMPL_VAR NAME=PAGE_TITLE></title>
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="css/search_product.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/search.js"></script>
+</head>
+
+  <body id="blastp">
+    <h2>BLAST+ Results</h2>
+    <h4>Sequence entered: <TMPL_VAR NAME=QUERY_SEQ></h4>
+    <p><TMPL_VAR NAME=BLASTP_OUT></p>
+    <p><a href="../FinalProject/">Return to the main page</a></p>
+  </body>
+</html>
